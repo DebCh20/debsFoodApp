@@ -1,0 +1,12 @@
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7rem;
+    justify-content: center;
+    align-items: center;
+}
+.cards{
+    background: #6cc0cf;
+    height: 15rem;
+    width: 15rem;
+}
