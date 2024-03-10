@@ -1,0 +1,31 @@
+.biggerCard{
+    border-radius: 10px;
+    height: 30rem;
+    width: 50rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-image: url("https://images.pexels.com/photos/349610/pexels-photo-349610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+.factsSpan{
+    position: relative;
+    top: -220px;
+    right: -445px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.smallerCards{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    position: relative;
+    top: -55px;
+    left: 120px;
+}
+
+#card3, #card2, #card1{
+    background-color: blanchedalmond;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    text-align: center;
+    padding: 10px;
+}
