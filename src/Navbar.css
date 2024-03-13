@@ -29,3 +29,9 @@
     border-radius: 15px;
     border:1px solid;    
 }
+.homepagelink{
+    text-align: center;    
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}

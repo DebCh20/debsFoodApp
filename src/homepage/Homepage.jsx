@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import './Homepage.css'
+import './Homepage.css';
+import { Routes, Route, Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import Foodinfopage from '../foodInfoPage/Foodinfopage';
 function Homepage() {
 
     let imgUrlList = ['https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -14,14 +16,7 @@ function Homepage() {
     
     useEffect(() => {
         const interval = setInterval(() => {            
-            if (index < imgUrlList.length - 1) {
-                setIndex(index + 1);
-                console.log('increase');
-              } else {
-                setIndex(0);
-              }
-              
-            console.log('change', index);
+            setIndex(prevIndex => (prevIndex + 1) % imgUrlList.length)
         }, 3000);
     
         // Cleanup function to clear the interval when the component unmounts or when index changes
@@ -34,6 +29,7 @@ function Homepage() {
         console.log(imgUrl);
       }, [index,imgUrlList]);
     return (
+        <>
         <div className='outerContainer' style={{ display: 'flex', marginTop: '2rem', justifyContent: 'center', alignItems: 'center' }}>
             <div className='biggerCard'>
                 <img src={imgUrl}
@@ -46,32 +42,33 @@ function Homepage() {
                         <img src='https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
                             style={{ height: '12rem', width: '10rem' }} />
                         <br />
-                        <a href='#' style={{
+                        <Link to='/foodInfo' style={{
                             textDecoration: 'none', border: '2px solid', borderRadius: '5px',
                             background: 'beige'
-                        }}>Dumlings</a>
+                        }}>Dumlings</Link>
                     </div>
                     <div id='card2'>
                         <img src='https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
                             style={{ height: '12rem', width: '10rem' }} />
                         <br />
-                        <a href='#' style={{
+                        <Link to='/foodInfo' style={{
                             textDecoration: 'none', border: '2px solid', borderRadius: '5px',
                             background: 'beige'
-                        }}>Dumlings</a>
+                        }}>Dumlings</Link>
                     </div>
                     <div id='card3'>
                         <img src='https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
                             style={{ height: '12rem', width: '10rem' }} />
                         <br />
-                        <a href='#' style={{
+                        <Link to='/foodInfo' style={{
                             textDecoration: 'none', border: '2px solid', borderRadius: '5px',
                             background: 'beige'
-                        }}>Dumlings</a>
+                        }}>Dumlings</Link>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>       
+        </>
     )
 }
 
