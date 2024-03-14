@@ -17,6 +17,7 @@
     position: relative;
     top: 11px;
     right: -39rem;
+    cursor: pointer;
 }
 
 .signup-button{
