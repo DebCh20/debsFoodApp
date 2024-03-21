@@ -7,10 +7,9 @@ import Homepage from './homepage/Homepage';
 import { Routes, Route, Link } from 'react-router-dom';
 import Foodinfopage from './foodInfoPage/Foodinfopage';
 import Showrecipepage from './Showrecipepage/Showrecipepage.jsx';
-
 function App() {
   return (
-   <>    
+   <>      
     <Routes>        
         {/* <Route path="/" element={<Navbar></Navbar>}/> */}
         <Route path="/" element={<Homepage/>}/>

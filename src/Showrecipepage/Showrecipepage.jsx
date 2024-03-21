@@ -2,7 +2,9 @@ import React from 'react'
 import './Showrecipepage.css';
 function Showrecipepage() {
   let index=10; 
-  let recipeList = ['pizza','burger', 'coke','pizza','burger', 'coke','pizza','burger', 'coke','pizza','burger', 'coke'] 
+  let recipeList = ['pizza','burger', 'coke','pizza','burger', 'coke','pizza','burger', 'coke','pizza','burger', 'coke']
+  
+  
   return (
     <div className='recipeCardsContainer'>
       {recipeList.map((recipe, index) => (
