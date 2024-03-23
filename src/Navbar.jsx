@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useContext } from 'react';
-import recipeDataContext from './context/recipedatacontext'
+import {FoodlistContext} from './context/Foodlistcontext'
 
 // import './output.css'
 function Navbar() {
   const navigate = useNavigate();
   let [query, setQuery]= useState('')
   
-  let contextData = useContext(recipeDataContext)
+  let fetchedDataState = useContext(FoodlistContext)
 
   const searchRecipe= () => {    
     setQuery(document.querySelector('.searchBar').value);
@@ -22,7 +22,7 @@ function Navbar() {
      const fetchRecipe = async ()=>{
       const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=6b734143b21846be87a110e3e8931c8f&query=${query}`);
       const data2= await response.json();
-      contextData.seData(data2);
+      fetchedDataState.setFetchedData(data2)
      }
      fetchRecipe();
   },[query])

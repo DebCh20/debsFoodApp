@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import RecipeDataContext from './context/recipedatacontext.js';
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from './Navbar';
+import { FoodlistProvider } from './context/Foodlistcontext.jsx';
 
 ReactDOM.render(  
-  <BrowserRouter>
-  <Navbar/> 
-  <RecipeDataContext>       
+  <BrowserRouter>  
+   <FoodlistProvider> 
+    <Navbar/>     
     <App />
-  </RecipeDataContext>
+   </FoodlistProvider>
   </BrowserRouter>,  
   document.getElementById('root'),
 );
