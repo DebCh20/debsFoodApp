@@ -7,12 +7,13 @@ import Homepage from './homepage/Homepage';
 import { Routes, Route, Link } from 'react-router-dom';
 import Foodinfopage from './foodInfoPage/Foodinfopage';
 import Showrecipepage from './Showrecipepage/Showrecipepage.jsx';
+import Landingpage from './LandingPage/Landingpage.jsx';
 function App() {
   return (
    <>      
     <Routes>        
         {/* <Route path="/" element={<Navbar></Navbar>}/> */}
-        <Route path="/" element={<Homepage/>}/>
+        <Route path="/" element={<Landingpage/>}/>
         <Route path="/foodInfo" element={<Foodinfopage />} />
         <Route path='/findRecipe/*' element={<Showrecipepage/>}/>
     </Routes>

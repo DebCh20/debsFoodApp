@@ -9,6 +9,8 @@ function Showrecipepage() {
   
   let fetchedData = useContext(FoodlistContext).fetchedData.results;
   console.log('fetched data', fetchedData);
+
+  https://api.spoonacular.com/recipes/{id}/information
   
   return (
     <div className='recipeCardsContainer'>
